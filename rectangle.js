@@ -1,27 +1,22 @@
 $(function(){
-    var $yonghu=$('#yonghu'),
-        $phone=$('#phone'),
-        $mima=$('#mima'),
-        $yanzheng=$('#yanzheng'),
-        $zhuCe=$('#zhuce');
-        $set=$('#set');
+  var $yonghu=$('#yonghu'),
+      $phone=$('#phone'),
+      $mima=$('#mima'),
+      $zhuCe=$('#zhuce');
+      $set=$('#set');
     var count=60;
-
-    $set.click(()=>{
+    $set.click(function(){
       $set.addClass('disable').attr({'disabled':'disabled'});
-      var timer = setInterval(()=>{
+      var timer=setInterval(function(){
         $set.html(count--);                           
       },1000);
-      setTimeout(()=>{
+      setTimeout(function(){
         $set.removeClass('disable').removeAttr('disabled');
         clearInterval(timer);
         $set.html('获取验证码');
-        count = 59;
-        $('#yanzheng-validation-message').html('请求');
+        count=59;
       },60000);
-      //$('#yanzheng-validation-message').html('请求超时，请稍候再试');
-
-  });
+    });
     $zhuCe.click(function(){
       if(!validate('#yonghu') || !validate('#phone') || !validate('#mima') || !validate('#yanzheng')) return;
     });
@@ -34,11 +29,9 @@ $(function(){
     $mima.focusout(function(){
       if(!validate('#mima')) $mima.select();
     });
-
-
     function validate(field){
       var $data=$(field),
-          $msg=$(field+'-validation-message');
+        $msg=$(field+'-validation-message');
       if($data.val()===''){
         if(field=='#yonghu'){
           $msg.html('用户名不能为空');
