@@ -1,0 +1,53 @@
+#main {
+  background-color:lightgray;
+  width:400px;
+  height:500px;
+  float:left;
+  border-radius:15px;
+  top:100px;
+  right:100px;
+  font-size: 1.1em;
+  position:absolute;
+}
+#one{
+  padding-left:25px;
+}
+#two{
+  padding-left:25px;
+  color:gray;
+}
+input,label{
+  padding-left:25px;
+  font-size:1em;
+  margin: 10px 0;
+}
+#yanzheng{
+  width:100px;
+}
+#set{
+  background-color:#fff;
+  border:1px soild white;
+  width:100px;
+  height:25px;
+}
+#zhuce{
+  background-color:blue;
+  color:#fff;
+  width:250px;
+  height:40px;
+  float:left;
+  margin-left:50px;
+
+}
+span{
+  color:red;
+}
+
+#yonghu-validation-message,
+#phone-validation-message,
+#yanzheng-validation-message,
+#mima-validation-message{
+  color:red;
+  font-size:0.8em;
+  margin-left:30px;
+}
